@@ -1,0 +1,125 @@
+java C:\Users\rsc07\silver_practice\MainSilver.java brownz silver gold -encoding utf-8
+
+
+java C:\Users\rsc07\silver_practice\MainSilver.java 銅 銀 金 -encoding utf-8
+
+
+
+javac C:\Users\rsc07\silver_practice\MainSilver.java -encoding utf-8
+
+
+
+javac C:\Users\rsc07\silver_practice\Sample.java -encoding utf-8
+
+
+
+java silver_practice.Sample
+
+
+
+kkk
+
+〖２〗
+1 C
+2 Cx
+3 C D E F I
+4C
+5DE
+6B x
+7C
+8A
+9AB
+10B x
+11C(f) x
+12E
+13D
+14C
+15D x
+16C x
+17A
+18C
+19D x
+20C x
+21D
+22A
+
+
+char型...文字列ではない。文字を表すデータ型。
+	javaでは、文字リテラルと文字列リテラルに分別される。
+	コンピューター内部では文字に番号が振られています。
+	これを文字符号化方式or文字コードという
+	93年に共通の文字符号化式unidodeが誕生。
+	u+0000~ffff。
+	javaでは、¥uの後に0000~ffff(16進数)。
+
+【var】
+	配列
+	null
+	非初期化
+	ラムダ式	→	コンパイルエラー
+
+	new ArrayList<>()	→	オーケー
+	<>ジェネリクスが空の場合Objectが入ることになる。
+
+【Stringは不変なオブジェクト】
+	mutable(可変)
+	immutable(不変)
+
+final class Test{
+	private final int number;
+	private final String name;
+	public Test(String name, int number) {
+		this.name = name;
+		this.number = number;				これはオーケー。
+	}
+
+	private final int number;
+	private final String name;を
+
+	private final int number = 1;
+	private final String name = "jj";	などとするとコンパイルエラー。
+
+	this.name = name;
+	this.number = number;の部分を消せば、引数ありでも問題なし。
+
+【Stringのメソッド】
+charAt()そのインデクスの文字を返す。そのインデックスがない場合例外をスロー。(OutOfBounds)
+
+indexOf()そのインデックスの文字を返す。ない場合は-1を返す。
+
+＊使用を考えれば自然とわかる。
+charAt()はインデックス番号を指定してるので、なければ当然OutOfBoundsになる。
+indexOf()は文字(文字列？)なのでインデックス番号がそもそもない。
+
+substring()
+文字の間にインデックス番号があるみたいな感じ。一個目が0。例外はOutOfBounds
+
+【replaceAllとreplaceの違い】
+System.out.println(f.replaceAll(".", "xx"));	axxaaaa
+System.out.println(f.replace(".", "xx"));		a.aaaa
+
+replaceAllがよいらしい。
+http://blog.livedoor.jp/clockwork_tomato/archives/9244153.html
+
+【メソッドチェイン】
+ドットでメソッドをつなぐ。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
